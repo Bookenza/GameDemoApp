@@ -80,7 +80,7 @@ const StartGameScreen = props => {
             />
             <View style = {styles.buttonContainer}>
                 <View style = {styles.button}><Button title="Reset" onPress={resetInputHandler} color={Colors.accent}/></View>
-                <View style = {styles.button}><Button title="Confirm"onPress={confirmInputHandler}color={Colors.primary}/></View>
+                <View style = {styles.button}><Button title="Confirm" onPress={confirmInputHandler}color={Colors.primary}/></View>
             </View>
         </Card>
         {confirmedOutput}
@@ -101,6 +101,7 @@ const styles = StyleSheet.create({
     title:{
         fontSize:20,
         marginVertical:15,
+        fontFamily:'OpenSans-Bold'
     },
 
     inputContainer:{
@@ -120,6 +121,11 @@ const styles = StyleSheet.create({
       width:100,
     },
 
+    buttonTitle:{
+       fontFamily:'OpenSans-Bold',
+        fontSize:20
+      },
+  
     input:{
         width:50,
         textAlign:'center'
