@@ -10,6 +10,11 @@ export default StyleSheet.create({
     bodyText:{
         fontFamily:'OpenSans-Regular',
         color:'red'
-    }
+    },
+
+    bodyDescText:{
+        fontFamily:'OpenSans-Bold',
+        fontSize:16
+    },
 
 });

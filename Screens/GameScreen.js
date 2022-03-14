@@ -1,9 +1,10 @@
 import React , {useState, useRef, useEffect} from 'react';
-import {StyleSheet,Button, View, Text, Alert} from 'react-native';
-  
+import {StyleSheet,Button, View, Text, Alert, ScrollView} from 'react-native';
+
 import NumberContainer from '../components/NumberContainer';
 import Card from '../components/Card';
 import DefaultStyles from '../constants/default-styles';
+import MainButton from '../components/MainButton';
 
 
 const generateRandomBetween = (min, max, exlude) => {
@@ -15,15 +16,21 @@ const generateRandomBetween = (min, max, exlude) => {
     } else {
         return rndNum;
     }
-
 }
+
+const renderListItem = (value, numOfRund) => (
+<View key={value} style={styles.listItem}>
+<Text>#{numOfRund}</Text>
+<Text>{value}</Text>
+</View>);
+
   const GameScreen = props => {
 
-    const [currentGuess, setCurrentGuess] = useState(
-        generateRandomBetween(1, 100, props.userChoice)
-        );
+    const initialGuess =  generateRandomBetween(1, 100, props.userChoice)
+    const [currentGuess, setCurrentGuess] = useState(initialGuess);
 
-    const [rounds, setRounds] = useState(0);
+    // const [rounds, setRounds] = useState(0);
+    const [pastGuesses, setPastGuesses] = useState([initialGuess]);
     const currentLow = useRef(1);
     const currentHigh = useRef(100);
 
@@ -31,7 +38,7 @@ const generateRandomBetween = (min, max, exlude) => {
 
     useEffect(() => {
         if (currentGuess === props.userChoice) {
-            props.onGameOver(rounds);
+            props.onGameOver(pastGuesses.length);
         }
     }, [currentGuess, userChoice, onGameOver]);
 
@@ -49,12 +56,13 @@ const generateRandomBetween = (min, max, exlude) => {
         if (direction === 'lower') {
             currentHigh.current = currentGuess;
         } else {
-            currentLow.current = currentGuess;
+            currentLow.current = currentGuess + 1 ;
         }
            
         const nextNumber = generateRandomBetween(currentLow.current,  currentHigh.current, currentGuess);
         setCurrentGuess(nextNumber);
-        setRounds(currRounds => currRounds + 1)
+        // setRounds(currRounds => currRounds + 1)
+        setPastGuesses(currPastGuesses => [nextNumber, ...currPastGuesses]);
     };
 
     return (
@@ -65,8 +73,14 @@ const generateRandomBetween = (min, max, exlude) => {
             <Card style={styles.buttonContainer}>
                 <Button title="LOWER" onPress={nextGuessHandler.bind(this,'lower')}/>
                 <Button title="GREATER" onPress={nextGuessHandler.bind(this,'greater')}/>
-
+                {/* <MainButton onPress={nextGuessHandler.bind(this,'lower')}>LOWER</MainButton>
+                <MainButton onPress={nextGuessHandler.bind(this,'greater')}>GREATER</MainButton> */}
             </Card>
+            <View style={styles.list}>
+            <ScrollView>
+                {pastGuesses.map((guess, index) => renderListItem(guess, pastGuesses.length-index))}
+            </ScrollView>
+            </View>
         </View>
 
     );
@@ -87,7 +101,21 @@ const generateRandomBetween = (min, max, exlude) => {
         width:300,
         maxWidth:'80%'
     },
+    list:{        
+        width:'80%',
+    },
+    listItem:{
+        borderColor:'#ccc',
+        borderWidth:1,
+        padding:15,
+        marginVertical:5,
+        backgroundColor:'white',
+        flexDirection:'row',
+        borderRadius:5,
+        justifyContent:'space-around',
+        width:'80%',
 
+    },
 });
 
 
