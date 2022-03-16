@@ -11,10 +11,10 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1530B7E9FCB641518C477774 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E667FAA0D8AB4B4CA004B8BC /* OpenSans-Bold.ttf */; };
 		2B9D18E8E63AF99D8918DE54 /* libPods-GameDemoApp-GameDemoAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2027EA0420C423E6F72781F0 /* libPods-GameDemoApp-GameDemoAppTests.a */; };
 		7BFFCEC1DADA42E2FB40C48C /* libPods-GameDemoApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7B0883B6B4554AB8EBE94E /* libPods-GameDemoApp.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		1530B7E9FCB641518C477774 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E667FAA0D8AB4B4CA004B8BC /* OpenSans-Bold.ttf */; };
 		B616F873287F452AAF628DF2 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BE9BE80B7B24024B9FEBDAF /* OpenSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +33,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* GameDemoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameDemoAppTests.m; sourceTree = "<group>"; };
 		0BC32A99C506471C5C6FE485 /* Pods-GameDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameDemoApp.release.xcconfig"; path = "Target Support Files/Pods-GameDemoApp/Pods-GameDemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		0BE9BE80B7B24024B9FEBDAF /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* GameDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = GameDemoApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = GameDemoApp/AppDelegate.m; sourceTree = "<group>"; };
@@ -44,10 +45,9 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = GameDemoApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2350AC800DA0B558555FBDA /* Pods-GameDemoApp-GameDemoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameDemoApp-GameDemoAppTests.release.xcconfig"; path = "Target Support Files/Pods-GameDemoApp-GameDemoAppTests/Pods-GameDemoApp-GameDemoAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE7B0883B6B4554AB8EBE94E /* libPods-GameDemoApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameDemoApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E667FAA0D8AB4B4CA004B8BC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F84011D203C88FF8D975B8E5 /* Pods-GameDemoApp-GameDemoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameDemoApp-GameDemoAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GameDemoApp-GameDemoAppTests/Pods-GameDemoApp-GameDemoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E667FAA0D8AB4B4CA004B8BC /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; name = "OpenSans-Bold.ttf"; path = "../assets/fonts/OpenSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0BE9BE80B7B24024B9FEBDAF /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,6 @@
 				F84011D203C88FF8D975B8E5 /* Pods-GameDemoApp-GameDemoAppTests.debug.xcconfig */,
 				B2350AC800DA0B558555FBDA /* Pods-GameDemoApp-GameDemoAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,14 +154,13 @@
 			sourceTree = "<group>";
 		};
 		A36803E3510A4DC89F26C622 /* Resources */ = {
-			isa = "PBXGroup";
+			isa = PBXGroup;
 			children = (
 				E667FAA0D8AB4B4CA004B8BC /* OpenSans-Bold.ttf */,
 				0BE9BE80B7B24024B9FEBDAF /* OpenSans-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 

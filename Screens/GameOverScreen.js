@@ -8,7 +8,6 @@ import MainButton from '../components/MainButton';
   const GameOverScreen = props => {
 
     return (
-
         <View style={styles.screen}>
            <Text style={DefaultStyles.title}>The Game is Over!</Text>
            <Image style={styles.image} source={require('../assets/gameover.png')}/>
@@ -26,7 +25,6 @@ import MainButton from '../components/MainButton';
            onPress={props.onRestart}/> */}
             
         </View>
-
     );
  };
 

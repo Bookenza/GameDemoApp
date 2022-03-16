@@ -1,15 +1,18 @@
 
-import React, {useReducer, useState}  from 'react';
+import React, {useReducer, useState, useEffect}  from 'react';
 
 import {
     StyleSheet,
     View,
-    Dimensions,
     Text,
     Button,
     TouchableWithoutFeedback,
     Keyboard,
-    Alert
+    Alert,
+    Dimensions,
+    ScrollView,
+    KeyboardAvoidingView,
+    SafeAreaView
   } from 'react-native';
   
 
@@ -25,6 +28,22 @@ const StartGameScreen = props => {
     const [enteredValue, setEnteredValue] = useState('');
     const [confirmed, setConfirmed] = useState(false);
     const [selectedNumber, setSelectedNumber] = useState();
+    const [buttonWidth, setButtonWidth] = useState(Dimensions.get('window')/4);
+
+    // const updateLayout = () => {
+    //     setButtonWidth(Dimensions.get('window')/4);
+    // }
+    // Dimensions.addEventListener('change', updateLayout);
+
+    // useEffect(() => {
+    //     const updateLayout = () => {
+    //         setButtonWidth(Dimensions.get('window')/4);
+    //     }
+    //     Dimensions.addEventListener('change', updateLayout);
+    //     return () => {
+    //         Dimensions.removeEventListener('change', updateLayout);
+    //     };
+    // });
 
     const numberInputHandler = inputText => {
         setEnteredValue(inputText.replace(/[^0-9]/g, ''));
@@ -62,8 +81,11 @@ const StartGameScreen = props => {
     }
 
     return (
-    
-        <TouchableWithoutFeedback onPress={() => {
+        <SafeAreaView>
+        <ScrollView>
+        <KeyboardAvoidingView behavior="position" keyboardVerticalOffset={30}>
+        <TouchableWithoutFeedback 
+        onPress={() => {
             Keyboard.dismiss();
         }}>
         <View style = {styles.screen}>
@@ -88,6 +110,9 @@ const StartGameScreen = props => {
         {confirmedOutput}
         </View>
         </TouchableWithoutFeedback>
+        </KeyboardAvoidingView>
+        </ScrollView>
+        </SafeAreaView>
     );
 
 };
@@ -107,8 +132,9 @@ const styles = StyleSheet.create({
     },
 
     inputContainer:{
-        width:300,
-        maxWidth:'80%',
+        minWidth:300,
+        maxWidth:'95%',
+        width:'80%',
         alignItems:'center',
     },
 
@@ -120,7 +146,8 @@ const styles = StyleSheet.create({
     },
 
     button:{
-      width:100,
+    //   width:100,
+      width:Dimensions.get('window').width / 4,
     },
 
     buttonTitle:{
